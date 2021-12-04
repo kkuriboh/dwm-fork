@@ -5,6 +5,7 @@ static const unsigned int borderpx = 0; /* border pixel of windows */
 static const unsigned int snap = 32;    /* snap pixel */
 static const unsigned int gappih = 5;   /* horiz inner gap between windows */
 static const unsigned int gappiv = 5;   /* vert inner gap between windows */
+static const int scalepreview       = 4;        /* tag preview scaling */
 static const int vertpad = 5;           /* vertical padding of bar */
 static const int sidepad = 5;           /* horizontal padding of bar */
 static const int user_bh = 20; /* 0 means that dwm will calculate bar height, >=
@@ -39,7 +40,8 @@ static const Rule rules[] = {
      *	WM_NAME(STRING) = title
      */
     /* class      instance    title       tags mask     isfloating   monitor */
-    {"pcmanfm", NULL, NULL, 0, 1, -1},
+    {"pcmanfm", NULL, NULL, 0, 0, -1},
+//    {"jetbrains-idea-ce", NULL, NULL, 0, 1, -1},
 };
 
 /* layout(s) */

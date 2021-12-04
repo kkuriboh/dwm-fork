@@ -7,6 +7,8 @@ static const unsigned int gappih = 5;   /* horiz inner gap between windows */
 static const unsigned int gappiv = 5;   /* vert inner gap between windows */
 static const int vertpad = 5;           /* vertical padding of bar */
 static const int sidepad = 5;           /* horizontal padding of bar */
+static const int user_bh = 20; /* 0 means that dwm will calculate bar height, >=
+                                  1 means dwm will user_bh as bar height */
 static const unsigned int gappoh =
     5; /* horiz outer gap between windows and screen edge */
 static const unsigned int gappov =
@@ -21,7 +23,7 @@ static const char col_gray1[] = "#32344a";
 static const char col_gray2[] = "#7da6ff";
 static const char col_gray3[] = "#f7768e";
 static const char col_gray4[] = "#444b6a";
-static const char col_cyan[] = "#1a1b16";
+static const char col_cyan[] = "#24283b";
 static const char *colors[][3] = {
     /*               fg         bg         border   */
     [SchemeNorm] = {col_gray3, col_gray1, col_gray2},
@@ -37,7 +39,8 @@ static const Rule rules[] = {
      *	WM_NAME(STRING) = title
      */
     /* class      instance    title       tags mask     isfloating   monitor */
-    {"pcmanfm", NULL, NULL, 0, 1, -1},
+    {"pcmanfm", NULL, NULL, 0, 0, -1},
+//    {"jetbrains-idea-ce", NULL, NULL, 0, 1, -1},
 };
 
 /* layout(s) */
