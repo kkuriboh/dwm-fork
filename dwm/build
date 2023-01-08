@@ -1,5 +1,0 @@
-#!/bin/bash
-make clean
-cp config.def.h config.h
-make install
-make clean
